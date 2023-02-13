@@ -1,0 +1,19 @@
+def moves (p):
+    return (p+1,p+10)
+
+def game(p):
+    if p>=52:
+        return "win"
+    r=set()
+    for i in moves (p):
+        r.add(game(i))
+    if "win" in r:
+        return "p1"
+    if r =={'p1'}:
+        return 'v1'
+    if 'v1' in r:
+        return 'p2'
+    if r=={'p1','p2'}:
+        return 'v1-2'
+for s in range (1,52):
+    print(s,game(s))
