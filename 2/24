@@ -1,0 +1,9 @@
+f=open('2.txt')
+s = f.read()
+k=0
+kmax=0
+for i in range(0, len (s)):
+    if s [i] != 'Z':
+        k+=1
+        kmax=max(k,kmax)
+print(kmax)
